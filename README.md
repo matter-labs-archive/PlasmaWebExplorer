@@ -1,2 +1,1 @@
-# PlasmaWebExplorer
-Plasma Blockchain Explorer
+# Plasma Blockchain Explorer

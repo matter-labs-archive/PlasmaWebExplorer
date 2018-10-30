@@ -9,3 +9,50 @@
 h2 {
 	padding-bottom: 0.9rem;
 }
+
+h4 {
+	padding-top: 1.5rem;
+}
+
+.block-number {
+	margin-bottom: 0.7rem;
+	border-radius: 6px;
+	border: 1px solid #dee2e6;
+	cursor: pointer;
+}
+
+.block-number.active {
+	background-color: rgba(0, 0, 0, 0.05);
+	font-weight: bold;
+	cursor: default;
+}
+
+table.info th:first-child {
+	width: 20%;
+}
+
+table.transactions th:first-child {
+	width: 5%;
+}
+
+table.transactions th:nth-child(2) {
+	width: 10%;
+}
+
+table.transactions th:nth-child(3) {
+	width: 30%;
+}
+
+table.transactions th:nth-child(4) {
+	width: 30%;
+}
+
+.tx-input {
+	border-radius: 6px;
+	border: 1px solid #dee2e6;
+	background-color: white;
+}
+
+.cursor-pointer {
+	cursor: pointer;
+}

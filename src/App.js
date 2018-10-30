@@ -17,7 +17,7 @@ class App extends Component {
       blockInfo: {},
       block: { transactions: [] },
       blockNumbers: [],
-      web3: new Web3(window.ethereum || new Web3.providers.HttpProvider(process.env.REACT_APP_INFURA_PROVIDER_ADDRESS)),
+      web3: new Web3(/*new Web3(window.ethereum ||*/ new Web3.providers.HttpProvider(process.env.REACT_APP_INFURA_PROVIDER_ADDRESS)),
     };
 
     const plasmaContractAddress = process.env.REACT_APP_PLASMA_CONTRACT_ADDRESS;

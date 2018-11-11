@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import { Container, Nav, Table, Row, Col } from 'reactstrap';
-import { Block } from './plasma-tx-js/Block/RLPblock';
-import { TxTypeSplit, TxTypeMerge, TxTypeFund } from './plasma-tx-js/Tx/RLPtx';
+import { TxTypeSplit, TxTypeMerge, TxTypeFund, Block } from '@thematter_io/plasma.js';
 import Web3 from 'web3';
 import ethUtil from 'ethereumjs-util';
 import logo from './logo.svg';

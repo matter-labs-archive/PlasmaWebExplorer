@@ -63,7 +63,7 @@ class App extends Component {
     const self = this;
 
     if (blockNumber === 0)
-      throw "Wrong block number";
+      throw new Error("Wrong block number");
 
     const url = `${process.env.REACT_APP_BLOCK_STORAGE_PREFIX}/${blockNumber}`;
     
@@ -109,7 +109,7 @@ class App extends Component {
         <div className="d-flex flex-column flex-md-row align-items-center p-3 px-md-4 mb-3 bg-white border-bottom shadow-sm">
           <h5 className="my-0 mr-md-auto font-weight-normal"><a href="/" className="mr-3"><img src={logo} className="logo" alt="logo" /></a> Matter Plasma | <span className="text-muted">Blockchain Scanner</span></h5>
           <Nav className="my-2 my-md-0 mr-md-3">
-            <a className="p-2 text-dark active" href="#">Home</a>
+            <a className="p-2 text-dark active" href="/">Home</a>
           </Nav>
         </div>
         <Container>

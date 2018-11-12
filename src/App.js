@@ -35,7 +35,7 @@ class App extends Component {
     const lastBlockNumber = parseInt(await this.state.plasmaContract.methods.lastBlockNumber().call());
 
     let blockNumbers = [];
-    for (let blockNumber = lastBlockNumber, count = 0; blockNumber >= 0 && count < 15; blockNumber--, count++)
+    for (let blockNumber = lastBlockNumber, count = 0; blockNumber > 0 && count < 19; blockNumber--, count++)
       blockNumbers.push(blockNumber);
 
     this.setState({ lastBlockNumber: lastBlockNumber, blockNumbers: blockNumbers });

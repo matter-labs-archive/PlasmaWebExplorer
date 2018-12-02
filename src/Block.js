@@ -15,22 +15,17 @@ class Block extends Component {
   constructor(props) {
     super(props);
 
-    // let blockNumber = parseInt(props.match.params.blockNumber, 10)
+    let blockNumber = parseInt(this.props.match.params.blockNumber, 10);
 
     this.state = {
-      // lastBlockNumber: 0,
-      blockNumber: this.props.blockNumber,
+      blockNumber: blockNumber,
       blockInfo: {},
-      block: { transactions: [] },
-      // blockNumbers: [],
-      // web3: new Web3(/*new Web3(window.ethereum ||*/ new Web3.providers.HttpProvider(process.env.REACT_APP_INFURA_PROVIDER_ADDRESS)),
+      block: { transactions: [] }
     };
 
-    // const plasmaContractAddress = process.env.REACT_APP_PLASMA_CONTRACT_ADDRESS;
-    // const plasmaContractAbi = JSON.parse(process.env.REACT_APP_PLASMA_CONTRACT_ABI);
-    // this.state.plasmaContract = new this.state.web3.eth.Contract(plasmaContractAbi, plasmaContractAddress, { gas: 1000000 });
-
-    this.setBlockNumber(this.state.blockNumber);
+    if (this.state.blockNumber) {
+      this.setBlockNumber(this.state.blockNumber);
+    }
   }
 
   componentDidUpdate(prevProps, prevState) {

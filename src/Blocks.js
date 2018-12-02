@@ -18,12 +18,21 @@ class Blocks extends Component {
     super(props);
 
     this.state = {
+      blockNumber: 0,
       lastBlockNumber: 0,
       blockNumbers: [],
     };
 
     this.getBlocks();
   }
+
+  // componentDidUpdate(prevProps, prevState) {
+    // console.log(this.props);
+    // let blockNumber = parseInt(this.props.match.params.blockNumber, 10);
+    // if (blockNumber !== this.state.blockNumber) {
+    //   console.log(blockNumber);
+    // }
+  // }
 
   async getBlocks() {
     const lastBlockNumber = parseInt(await this.props.plasmaContract.methods.lastBlockNumber().call());
@@ -32,8 +41,8 @@ class Blocks extends Component {
     for (let blockNumber = lastBlockNumber, count = 0; blockNumber > 0 && count < 19; blockNumber--, count++)
       blockNumbers.push(blockNumber);
 
-    this.setState({ lastBlockNumber: lastBlockNumber, blockNumbers: blockNumbers });
-    // this.props.history.push(`/blocks/${lastBlockNumber}`);
+    this.setState({ blockNumber: lastBlockNumber, lastBlockNumber: lastBlockNumber, blockNumbers: blockNumbers });
+    this.props.history.push(`/blocks/${lastBlockNumber}`);
   }
 
   render() {
